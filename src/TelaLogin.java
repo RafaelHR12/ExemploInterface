@@ -18,20 +18,19 @@ public class TelaLogin {
 
 		JLabel senha = new JLabel("Senha");
 		JPasswordField txSenha = new JPasswordField();
-		
+
 		txSenha.setToolTipText("Informe uma senha de 8 dígitos");
 		txUsuario.setToolTipText("Informe o nome de usuário");
-		
+
 		txSenha.setBackground(Color.cyan);
 		txSenha.setForeground(Color.red);
 
 		txUsuario.setBackground(Color.cyan);
 		txUsuario.setForeground(Color.red);
-		
-		
+
 		// Agrupar os componentes:
 		Object[] componentes = { usuario, txUsuario, senha, txSenha };
-		
+
 		// JPanel painel = new JPanel();
 		// painel.setLayout(new GridLayout(2,2));
 		// painel.add(usuario);
@@ -41,7 +40,7 @@ public class TelaLogin {
 
 		// Criar a janela:
 		JOptionPane.showMessageDialog(null, componentes);
-		
+
 		// JOptionPane.showMessageDialog(null, painel);
 
 		Cliente cliente = new Cliente();
