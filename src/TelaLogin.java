@@ -29,21 +29,24 @@ public class TelaLogin {
 		txUsuario.setForeground(Color.red);
 
 		// Agrupar os componentes:
-		Object[] componentes = { usuario, txUsuario, senha, txSenha };
+		// Object[] componentes = { usuario, txUsuario, senha, txSenha };
 
-		// JPanel painel = new JPanel();
-		// painel.setLayout(new GridLayout(2,2));
-		// painel.add(usuario);
-		// painel.add(txUsuario);
-		// painel.add(senha);
-		// painel.add(txSenha);
+		JPanel painel = new JPanel();
+		painel.setLayout(new GridLayout(2,2));
+		painel.add(usuario);
+		painel.add(txUsuario);
+		painel.add(senha);
+		painel.add(txSenha);
 
 		// Criar a janela:
-		JOptionPane.showMessageDialog(null, componentes);
+		JOptionPane.showMessageDialog(null, painel);
 
 		// JOptionPane.showMessageDialog(null, painel);
 
-		Cliente cliente = new Cliente();
+		// Cliente cliente = new Cliente();
+		Cliente cliente = new Cliente(txUsuario.getText(), new String (txSenha.getPassword()));
+		Cliente cliente2 = new Cliente("Pereira");
+		Cliente cliente3 = new Cliente();
 
 		if (cliente.verificarLogin(txUsuario.getText(), new String(txSenha.getPassword()))) {
 			JOptionPane.showMessageDialog(null, "Login realizado com sucesso!");
